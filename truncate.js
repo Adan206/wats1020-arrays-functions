@@ -18,6 +18,15 @@
 // are experimenting further or pursuing stretch goals.
 var originalText = "There are two hard things in Computer Science: Cach invalidation, naming things, and off-by-one errors.";
 var wordLimit = 8;
-var shortText = truncateWords(originalText, wordLimit);
+var shortText = truncateWords (originalText, wordLimit);
 console.log('originalText: ' + originalText);
 console.log('shortText: ' + shortText);
+
+var truncateWords = function(longText, numwords) {
+var textarray = longText.split(' ');
+var removewords = textarray.length - numwords;
+    textarray.splice (numwords, removewords);
+    textarray.push('...');
+var trunstring = textarray.join (' ');
+                  return trunstring;
+}
