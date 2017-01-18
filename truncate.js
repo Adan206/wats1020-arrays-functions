@@ -22,11 +22,16 @@ var shortText = truncateWords (originalText, wordLimit);
 console.log('originalText: ' + originalText);
 console.log('shortText: ' + shortText);
 
-var truncateWords = function(longText, numwords) {
-var textarray = longText.split(' ');
-var removewords = textarray.length - numwords;
-    textarray.splice (numwords, removewords);
-    textarray.push('...');
-var trunstring = textarray.join (' ');
-                  return trunstring;
-}
+ var truncateWords = function (longText, numWords)
+{
+var textArray  = longText.split(' ');  
+  console.log(textArray);
+var removeWords = textArray.length - numWords;
+  console.log(removeWords);
+    textArray.splice(numWords,removeWords);
+  console.log(textArray);
+    textArray.push ('...');
+  console.log(textArray);
+var truncString = textArray.join (' ');
+    return truncString;
+} 
