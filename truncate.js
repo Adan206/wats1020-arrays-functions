@@ -16,19 +16,24 @@
 // This portion of the script is meant to call and display the result of your Function.
 // You do not need to change the following lines, but you may change them if you 
 // are experimenting further or pursuing stretch goals.
-var originalText = "There are two hard things in Computer Science: Cach invalidation, naming things, and off-by-one errors.";
+
+
+  var originalText = "There are two hard things in Computer Science: Cach invalidation, naming things, and off-by-one errors.";
 var wordLimit = 8;
 var shortText = truncateWords (originalText, wordLimit);
 console.log('originalText: ' + originalText);
 console.log('shortText: ' + shortText);
 
-var truncateWords = function(longText, numwords) {
-var textarray = longText.split(' ');
-var removewords = textarray.length - numwords;
-    textarray.splice (numwords, removewords);
-    textarray.push('...');
-var trunstring = textarray.join (' ');
-                  return trunstring;
-}
-
-  
+ var truncateWords = function (longText, numWords)
+{
+var textArray  = longText.split(' ');  
+  console.log(textArray);
+var removeWords = textArray.length - numWords;
+  console.log(removeWords);
+    textArray.splice(numWords,removeWords);
+  console.log(textArray);
+    textArray.push ('...');
+  console.log(textArray);
+var truncString = textArray.join (' ');
+    return truncString;
+} 
